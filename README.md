@@ -53,7 +53,19 @@ For this multiclass classifier, we have 10 different classes and thus need to tr
 Each classifier produces a score bounded between -1 and 1, indicating how likely the input belongs to its corresponding class. The final predicted class is the one associated with the binary classifier that returns the highest score.
 
 #### One Vs. One
-For this classifier, the number of binary classifiers needed follows $K(K-1)/2$, in our case, this results to 45 different binary classifiers! Now thats a lot of classifiers!
+ To train all the classifiers using the One vs. One approach, we create binary classifiers for every possible pair of classes in the multi-class problem. Each binary classifier is responsible for distinguishing between the prediction of two specific classes. For instance, we need a classifier that can differentiate between predicting digit 3 or digit 5 given an input image. 
+
+ We do this for a total of 45 binary classifiers, which happens to be $K(K-1)/2$
+
+During the training phase, we will use the corresponding subset of the labeled training data for each pair of classes. For instance, for the classifier 3 vs. 5, we use only the images labeled as 3 or 5. For the classifier 1 vs. 9, we use only the instances labeled as 1 or 9, and so on
+
+When we want to classify a new input image, we pass it through all the binary classifiers. Each classifier makes a prediction (3 or 5, 1 or 9, etc.). The class that receives the most votes across all classifiers is then assigned as the final prediction for the new input image
+
+
+### Randomized Feature Mapping
+
+Next, instead of passing the training data through to train the above classifiers, we pass the set of images to a set of non-linear functions that we will use for 
+
 
 
 
