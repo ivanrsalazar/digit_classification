@@ -7,7 +7,7 @@ import math
 
 
 
-def import_data(noStack=False):
+def import_data():
     '''
     imported and converted mnist data into numpy arrays
     these array consist of two test sets and training sets
@@ -31,11 +31,9 @@ def import_data(noStack=False):
 
     train_ones = np.ones((trainX.shape[0],1))                               
     test_ones = np.ones((testX.shape[0],1))
-    if(noStack):
-        pass
-    else:    
-        trainX = np.hstack((trainX,train_ones))                       
-        testX = np.hstack((testX,test_ones))
+        
+    trainX = np.hstack((trainX,train_ones))                       
+    testX = np.hstack((testX,test_ones))
 
     return testX, testY, trainX, trainY
 
@@ -85,12 +83,12 @@ def filter_data(data_set,labels, k, j):
     
 
 
-def reshape_data(data):
+def reshape_data():
     '''
     returns void, does work on dataset so it can be displayed
     '''
-    testX = data[0].reshape((10000, 28, 28))
-    trainX = data[2].reshape((60000,28,28))
+    testX = testX.reshape((10000, 28, 28))
+    trainX = trainX.reshape((60000,28,28))
 
     return testX
 
@@ -106,7 +104,7 @@ def show_img(data,show_one=0):
     '''
     trainX = data[0]
     for img in trainX:
-        plt.imshow(img, cmap='Reds_r')
+        plt.imshow(img)
         plt.show()
         if show_one == 1: break
     
