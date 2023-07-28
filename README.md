@@ -29,6 +29,7 @@ Next, by utilizing the psuedoinverse of the training data, we can come up with a
 $$ 
 X^TY = (X^TX)W
 $$
+
 $$ 
 (X^TX)^{-1}X^TY = W  
 $$
