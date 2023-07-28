@@ -26,8 +26,12 @@ From here, we can arrive at:
  $$Y = XW$$
 Next, by utilizing the psuedoinverse of the training data, we can come up with an optimized set of weights that will successfully predict the output of y:
 
-$$ X^TY = (X^TX)W$$
-$$ (X^TX)^{-1}X^TY = W  $$
+$$ 
+X^TY = (X^TX)W
+$$
+$$ 
+(X^TX)^{-1}X^TY = W  
+$$
 
 To implement the binary classifier for a specific digit, we perform a relabeling process on the dataset's labels. The goal is to assign a value of 1 to labels that correspond to the digit we are training for, and a value of -1 to labels that represent any other digit. This transformation enables us to create a clear distinction between the target digit and all other digits.
 
