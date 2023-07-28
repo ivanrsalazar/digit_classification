@@ -23,13 +23,6 @@ The next classifier would distinguish between a specific digit and another speci
 Building upon the knowledge gained from binary classifiers, we extended our efforts to create a multiclass classifier. By combining the outputs of multiple binary classifiers, we achieved the ability to recognize multiple digits simultaneously. Through rigorous experimentation and tuning, we achieved an impressive error rate of just 3%.
 
 
-### Setup
--  Two remote EC2 instances responsible for establishing a long-lasting WebSocket connection to [OpenSea Stream API](https://docs.opensea.io/reference/stream-api-overview)
-- The instances continuously capture event data from various NFT collections and write it to a local file
-- The data is batched hourly, where the application writes to a new file as soon as an event from a new hour is received
-- The collected data is uploaded to S3 via an hourly cron job 
-- Apache Airflow is run on a local machine, and is used to transform and load the past hours sales event data to an RDS PostgerSQL data warehouse
-
 
 
 
