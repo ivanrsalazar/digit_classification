@@ -8,8 +8,9 @@ In this documentation, we present a comprehensive overview of our journey into t
 We kick-started our exploration by developing a binary least squares classifier. The objective here is to come up with some set of weights $W$, where given an input image, we can successfully predict the output classification.
 
 $$
- \hat{y} = xW 
+\hat{y} = xW
 $$
+
 where $\hat{y}$ is the predicted output and $x$ is the corresponding input image
 
 Now, if we expand this to the entire dataset we will arrive to the Least Squares equation, where the goal is to minimize the error between the correct label y and predicted label 
