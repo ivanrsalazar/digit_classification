@@ -79,10 +79,13 @@ Next, instead of passing the training data directly through to train the above c
 $$
 Z = [z_1,z_2,...,z_L]^T
 $$
+
 where $z_1,z_2,...,z_L$ are the row vectors of $Z$
+
 $$
 b = [b_1,b_2,...,b_L]^T
 $$
+
 where $b_1,b_2,...,b_L$ are scalar values
 
 $$
