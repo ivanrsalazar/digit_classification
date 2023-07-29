@@ -113,6 +113,20 @@ $$
 
 
 
+## Required:
+- scip
+- numpy
+- matplotlib
+- time
+- itertools
+- math
+
+
+
+
+
+
+
 
 
 
