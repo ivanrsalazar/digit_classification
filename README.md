@@ -95,6 +95,7 @@ $$
 these values are then passed through a non-linear function, with those results used to train our new binary classifiers
 
 Thus, our new set of feature vectors are equal to:
+
 $$
     \begin{bmatrix}
     {v_1(x) = f(w_1^Tx + b_1)} \\
