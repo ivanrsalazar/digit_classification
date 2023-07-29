@@ -114,7 +114,7 @@ $$
 
 
 ## Required:
-- scip
+- scipy
 - numpy
 - matplotlib
 - time
