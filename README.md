@@ -11,7 +11,11 @@ $$
 \hat{y} = xW
 $$
 
-where $\hat{y}$ is the predicted output and $x$ is the corresponding input image, with error being defined as: $ e = y - \hat{y}$
+where $\hat{y}$ is the predicted output and $x$ is the corresponding input image, with error being defined as: 
+
+$$
+e = y - \hat{y}
+$$
 
 We can then utilize the Least Squares equation in order to minimize error over a set of images, $X$
 
